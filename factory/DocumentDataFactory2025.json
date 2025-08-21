@@ -1,0 +1,9 @@
+{
+	"name": "DocumentDataFactory2025",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "760a8d49-1b09-4f71-a2ce-86f79bc6a796",
+		"tenantId": "bfc82108-10d3-4995-b397-3a291d4c579d"
+	}
+}

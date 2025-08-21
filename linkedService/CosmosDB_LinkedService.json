@@ -1,0 +1,12 @@
+{
+	"name": "CosmosDB_LinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "CosmosDb",
+		"typeProperties": {
+			"connectionString": "AccountEndpoint=https://documentcosmos2025.documents.azure.com:443/;Database=DocumentIntelligenceDB;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQENBQTcwN0MxLTQyRjktNDhFRi05NTNCLUE5OTQzODRBRkM4OF9mNzE4ZTA0OS01NDc2LTRjMjQtYTU5ZC1lMTY2NjMzODExNGUiDQp9"
+		}
+	}
+}
