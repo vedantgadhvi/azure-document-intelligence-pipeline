@@ -1,4 +1,10 @@
-# Azure Document Intelligence Platform
+# Azure Document Intelligence
+
+![Azure](https://img.shields.io/badge/Azure-Cloud-blue)
+![DataFactory](https://img.shields.io/badge/Azure%20Data%20Factory-Automation-1f72ff)
+![CosmosDB](https://img.shields.io/badge/Azure%20Cosmos%20DB-NoSQL-00a2ed)
+![Storage](https://img.shields.io/badge/Azure%20Blob-Storage-1389fd)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## Overview
 
