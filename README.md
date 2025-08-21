@@ -122,20 +122,6 @@ az deployment group create \
 ### 3. Configure Services
 Follow the detailed setup guide in `docs/setup-guide.md` for complete configuration instructions.
 
-## Cost Analysis
-
-This solution is designed for cost optimization using Azure's free and low-cost tiers:
-
-| Service | Tier | Monthly Cost (USD) |
-|---------|------|-------------------|
-| Azure Cosmos DB | Serverless + Free Tier | $0.00 |
-| Azure Blob Storage | Standard LRS | ~$2.00 |
-| Azure Document Intelligence | Free Tier | $0.00 |
-| Azure Data Factory | Pay-per-use | ~$5.00 |
-| **Total Estimated Cost** | | **~$7.00** |
-
-*Costs may vary based on usage patterns and data volume*
-
 ## Performance Metrics
 
 - **Document Processing Speed**: ~15 seconds per document
@@ -238,19 +224,6 @@ For detailed troubleshooting steps, see `docs/troubleshooting.md`.
 - [Architecture Overview](docs/architecture.md)
 - [API Documentation](docs/api-reference.md)
 - [Troubleshooting Guide](docs/troubleshooting.md)
-
-## Support
-
-For questions, issues, or contributions:
-
-- Create an issue in this repository
-- Review existing documentation
-- Check the troubleshooting guide
-- Contact the development team
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
