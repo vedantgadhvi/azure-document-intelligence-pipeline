@@ -60,34 +60,19 @@ The solution implements a modern data processing pipeline using the following Az
 
 ```
 azure-document-intelligence/
-├── README.md                           # Project documentation
-├── docs/                               # Additional documentation
-│   ├── setup-guide.md                 # Detailed setup instructions
-│   ├── architecture.md                # Technical architecture details
-│   ├── troubleshooting.md             # Common issues and solutions
-│   └── screenshots/                   # Visual documentation
-├── azure-resources/                   # Azure resource configurations
-│   ├── data-factory/                  # Data Factory pipelines and datasets
-│   │   ├── pipeline-definition.json   # Main processing pipeline
-│   │   ├── linked-services.json       # Service connections
-│   │   └── datasets.json              # Data source definitions
-│   ├── cosmos-db/                     # Database configurations
-│   │   ├── database-schema.json       # Container definitions
-│   │   └── sample-data.json           # Test data examples
-│   ├── document-intelligence/         # AI service configuration
-│   │   └── model-configuration.json   # Document processing settings
-│   └── storage/                       # Blob storage setup
-│       └── container-structure.md     # Storage organization
-├── scripts/                           # Automation and utility scripts
-│   ├── deploy-resources.sh           # Infrastructure deployment
-│   ├── upload-sample-data.py         # Sample data loader
-│   └── monitor-pipeline.ps1          # Pipeline monitoring
-├── sample-data/                       # Test documents and datasets
-│   ├── invoices/                     # Sample invoice documents
-│   └── expected-outputs/             # Expected extraction results
-└── tests/                            # Testing framework
-    ├── integration-tests/            # End-to-end pipeline tests
-    └── unit-tests/                   # Component-level tests
+├── LICENSE
+├── README.md                           # Main project documentation and usage guide
+├── dataset/                            # Dataset definitions used in Data Factory
+│   ├── BlobDataset.json                 # Blob storage dataset configuration
+├── factory/                            # Data Factory instance configuration
+│   ├── DocumentDataFactory2025.json     # Data Factory metadata and core settings
+├── linkedService/                      # Linked service connection definitions
+│   ├── AzureBlobStorage_LinkedService.json  # Connection to Azure Blob Storage
+│   ├── CosmosDB_LinkedService.json         # Connection to Azure Cosmos DB
+├── pipeline/                           # Pipeline definitions
+│   ├── ProcessInvoiceDocuments.json        # Pipeline for processing invoice documents
+└── publish_config.json                 # Publish configuration for CI/CD deployments
+
 ```
 
 ## Prerequisites
@@ -96,31 +81,6 @@ azure-document-intelligence/
 - Azure CLI installed and configured
 - Basic understanding of Azure services
 - Familiarity with JSON and data processing concepts
-
-## Quick Start
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/[your-username]/azure-document-intelligence.git
-cd azure-document-intelligence
-```
-
-### 2. Deploy Azure Resources
-```bash
-# Login to Azure
-az login
-
-# Create resource group
-az group create --name DocumentIntelligenceRG --location eastus
-
-# Deploy resources using ARM template
-az deployment group create \
-  --resource-group DocumentIntelligenceRG \
-  --template-file azure-resources/main-template.json
-```
-
-### 3. Configure Services
-Follow the detailed setup guide in `docs/setup-guide.md` for complete configuration instructions.
 
 ## Performance Metrics
 
@@ -147,57 +107,11 @@ The solution includes comprehensive monitoring:
 - Automated alerting for failures
 - Cost tracking and budget alerts
 
-## Contributing
-
-We welcome contributions to improve this project. Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Make your changes and test thoroughly
-4. Commit your changes (`git commit -am 'Add new feature'`)
-5. Push to the branch (`git push origin feature/improvement`)
-6. Create a Pull Request
-
-## Testing
-
-### Running Integration Tests
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run pipeline tests
-python tests/integration-tests/test-pipeline.py
-
-# Run data validation tests
-python tests/integration-tests/test-data-quality.py
-```
-
 ### Manual Testing
 1. Upload sample documents to blob storage
 2. Trigger Data Factory pipeline
 3. Verify data extraction in Cosmos DB
 4. Check monitoring dashboards
-
-## Troubleshooting
-
-### Common Issues
-
-**Pipeline Fails to Start**
-- Check linked service connections
-- Verify service principal permissions
-- Review integration runtime status
-
-**Document Processing Errors**
-- Validate document format compatibility
-- Check Document Intelligence service limits
-- Review confidence score thresholds
-
-**Data Storage Issues**
-- Verify Cosmos DB connection strings
-- Check container partition key configuration
-- Monitor request unit consumption
-
-For detailed troubleshooting steps, see `docs/troubleshooting.md`.
 
 ## Roadmap
 
@@ -217,13 +131,6 @@ For detailed troubleshooting steps, see `docs/troubleshooting.md`.
 - Advanced security controls
 - Custom model training
 - API endpoint development
-
-## Documentation
-
-- [Detailed Setup Guide](docs/setup-guide.md)
-- [Architecture Overview](docs/architecture.md)
-- [API Documentation](docs/api-reference.md)
-- [Troubleshooting Guide](docs/troubleshooting.md)
 
 ## Acknowledgments
 
